@@ -9,8 +9,30 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("componentes de flutter"),
       ) ,
-        body: const Center(
-          child: Text('Hello World!'),
+        body:ListView(children:const [
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          Text('Hola'),
+          ],
         ),
       );
   }
