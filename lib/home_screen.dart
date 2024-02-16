@@ -10,40 +10,30 @@ class HomeScreen extends StatelessWidget {
         title: const Text("componentes de flutter"),
         
       ) ,
-        body:ListView(children:const [
+      
+        body:ListView(children: [
           ListTile(
-            title: Text('Holaaaaaaaaa', 
-                    style: 
-                    TextStyle(
-                      color: Color.fromARGB(255, 1, 143, 32)
-                    )),
-            subtitle: Text('Adios'),
-            leading: Icon(Icons.app_settings_alt, color: Colors.indigo,),
-            trailing: Icon(Icons.arrow_right),
+            title: Text('Holaaaaaaaaa',
+            style: Theme.of(context).textTheme.headlineLarge,),
+            subtitle: const Text('Adios'),
+            leading: const Icon(Icons.app_settings_alt, color: Colors.indigo,),
+            trailing: const Icon(Icons.arrow_right),
           ),
-          Divider(
-            color: Colors.pinkAccent,
+          const Divider(
+            color: Color.fromARGB(255, 255, 255, 255),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.add_location, color: Colors.indigo),
-            title: Text('Holaaaaaaaaa', 
-                    style: 
-                    TextStyle(
-                      color: Color.fromARGB(255, 1, 143, 32)
-                    )),
+            title: Text('Holaaaaaaaaa'),
             subtitle: Text('Adios'),
             trailing: Icon(Icons.arrow_right),
           ),
-          Divider(
-            color: Colors.red,
+          const Divider(
+            color: Color.fromARGB(255, 255, 255, 255),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.admin_panel_settings_rounded, color: Colors.indigo,),
-            title: Text('Holaaaaaaaaa', 
-                    style: 
-                    TextStyle(
-                      color: Color.fromARGB(255, 1, 143, 32)
-                    )),
+            title: Text('Holaaaaaaaaa'),
             subtitle: Text('Adios'),
             trailing: Icon(Icons.arrow_right),
           )
