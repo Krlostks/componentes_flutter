@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: const Text("componentes de flutter"),
+        title: const Text("componentes de flutter", ),
         
       ) ,
       
@@ -15,27 +15,29 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             title: Text('Holaaaaaaaaa',
             style: Theme.of(context).textTheme.headlineLarge,),
-            subtitle: const Text('Adios'),
+            subtitle: const Text('Diferentes widgest para entradas de flutter'),
             leading: const Icon(Icons.app_settings_alt, color: Colors.indigo,),
             trailing: const Icon(Icons.arrow_right),
           ),
           const Divider(
             color: Color.fromARGB(255, 255, 255, 255),
           ),
-          const ListTile(
-            leading: Icon(Icons.add_location, color: Colors.indigo),
-            title: Text('Holaaaaaaaaa'),
-            subtitle: Text('Adios'),
-            trailing: Icon(Icons.arrow_right),
+           ListTile(
+            leading: const Icon(Icons.add_location, color: Colors.indigo),
+            title: Text('Listview.biulder',
+            style: Theme.of(context).textTheme.headlineLarge,),
+            subtitle: const Text('Scroll infinito'),
+            trailing: const Icon(Icons.list_alt_rounded),
           ),
           const Divider(
             color: Color.fromARGB(255, 255, 255, 255),
           ),
-          const ListTile(
-            leading: Icon(Icons.admin_panel_settings_rounded, color: Colors.indigo,),
-            title: Text('Holaaaaaaaaa'),
-            subtitle: Text('Adios'),
-            trailing: Icon(Icons.arrow_right),
+           ListTile(
+            leading: const Icon(Icons.admin_panel_settings_rounded, color: Colors.indigo,),
+            title: Text('Notificaciones',
+            style: Theme.of(context).textTheme.headlineLarge,),
+            subtitle: const Text('Notificaciones'),
+            trailing: const Icon(Icons.notification_add),
           )
         ],
         ),
