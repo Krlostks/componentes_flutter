@@ -7,15 +7,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: const Text("componentes de flutter", ),
-        
+        title:  Text("Componentes de flutter" ,
+            style: Theme.of(context).textTheme.headlineLarge,),
+    
       ) ,
       
         body:ListView(children: [
           ListTile(
             title: Text('Holaaaaaaaaa',
             style: Theme.of(context).textTheme.headlineLarge,),
-            subtitle: const Text('Diferentes widgest para entradas de flutter'),
+            subtitle: const Text('Diferentes widgets para entradas de flutter'),
             leading: const Icon(Icons.app_settings_alt, color: Colors.indigo,),
             trailing: const Icon(Icons.arrow_right),
           ),
