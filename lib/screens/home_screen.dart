@@ -20,7 +20,9 @@ class HomeScreen extends StatelessWidget {
             title: Text('Entradas',
             style: Theme.of(context).textTheme.headlineLarge,),
             subtitle: Text('Diferentes widgets para entradas de flutter', style:  Theme.of(context).textTheme.bodySmall),
-            leading: const Icon(Icons.app_settings_alt, color: AppTheme.iconos),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.app_settings_alt),),
             trailing: const Icon(Icons.arrow_right),
             onTap:() {
               final ruta1 = MaterialPageRoute(builder: (context){
@@ -33,11 +35,16 @@ class HomeScreen extends StatelessWidget {
             color: Color.fromARGB(255, 255, 255, 255),
           ),
            ListTile(
-            leading: const Icon(Icons.add_location, color: AppTheme.iconos),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.add_location),
+            ),
             title: Text('Scrooooooll',
             style: Theme.of(context).textTheme.headlineLarge,),
             subtitle: Text('Scroll infinito', style:  Theme.of(context).textTheme.bodySmall,),
-            trailing: const Icon(Icons.list_alt_rounded),
+            trailing:  IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child:const Icon ( Icons.list),),
             onTap:() {
               final ruta2 = MaterialPageRoute(builder: (context){
                 return const InfinitListScreen();
@@ -49,11 +56,17 @@ class HomeScreen extends StatelessWidget {
             color: Color.fromARGB(255, 255, 255, 255),
           ),
            ListTile(
-            leading: const Icon(Icons.admin_panel_settings_rounded, color: AppTheme.iconos),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.notification_add),
+            ),
             title: Text('Notificaciones',
             style: Theme.of(context).textTheme.headlineLarge,),
             subtitle:  Text('Notificaciones', style:  Theme.of(context).textTheme.bodySmall),
-            trailing: const Icon(Icons.notification_add),
+            trailing:  IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child:const Icon ( Icons.notification_add),),
+
             onTap:() {
               final ruta3 = MaterialPageRoute(builder: (context){
                 return const NotificationsScreen();

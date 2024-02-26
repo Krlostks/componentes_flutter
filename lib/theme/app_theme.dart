@@ -8,10 +8,28 @@ class AppTheme{
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor ,
-    appBarTheme: const AppBarTheme(color : primarycolor),
+      appBarTheme:  AppBarTheme(color : primarycolor,
+        titleTextStyle: GoogleFonts.roboto(
+        color: primarycolor,
+        fontSize: 28.5,
+        fontWeight: FontWeight.bold
+      )
+    ),
+    iconTheme: const IconThemeData(
+      color: Color.fromARGB(255, 92, 96, 95),
+      size: 35.0
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        
+        backgroundColor: const MaterialStatePropertyAll(Colors.grey),
+        textStyle: MaterialStateProperty.all(GoogleFonts.roboto(color: const Color.fromARGB(255, 255, 255, 255)))
+      
+      )
+    ),
     textTheme:  TextTheme(
              headlineLarge: GoogleFonts.roboto(
-              color: Colors.white,
+              color: const Color.fromARGB(255, 0, 0, 0),
               fontWeight: FontWeight.w500,
               fontSize: 25,
               decoration: TextDecoration.underline,
