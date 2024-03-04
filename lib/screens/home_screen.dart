@@ -7,15 +7,18 @@ import 'package:flutter/material.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    int selectedIndex = 0;
+    return Scaffold(
       appBar: AppBar(
-        title:  Text("Componentes de flutter" ,
-            style: Theme.of(context).textTheme.headlineLarge,) 
+        title: const Text('Componentes de flutter', style: TextStyle(color: Colors.black),),
+            
       ) ,
       
         body:ListView(children: [
+          const Divider(),
           ListTile(
             title: Text('Entradas',
             style: Theme.of(context).textTheme.headlineLarge,),
@@ -23,10 +26,10 @@ class HomeScreen extends StatelessWidget {
             leading: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
               child: const Icon(Icons.app_settings_alt),),
-            trailing: const Icon(Icons.arrow_right),
+            //trailing: const Icon(Icons.arrow_right),
             onTap:() {
               final ruta1 = MaterialPageRoute(builder: (context){
-                return const InputScreen();
+                return const InputsScreen();
               });
               Navigator.push(context, ruta1);
             },
@@ -63,9 +66,9 @@ class HomeScreen extends StatelessWidget {
             title: Text('Notificaciones',
             style: Theme.of(context).textTheme.headlineLarge,),
             subtitle:  Text('Notificaciones', style:  Theme.of(context).textTheme.bodySmall),
-            trailing:  IconTheme(
-              data: AppTheme.lightTheme.iconTheme,
-              child:const Icon ( Icons.notification_add),),
+            //trailing:  IconTheme(
+              //data: AppTheme.lightTheme.iconTheme,
+              //child:const Icon ( Icons.notification_add),),
 
             onTap:() {
               final ruta3 = MaterialPageRoute(builder: (context){
@@ -76,6 +79,24 @@ class HomeScreen extends StatelessWidget {
           )
         ],
         ),
+                bottomNavigationBar: BottomNavigationBar(
+          currentIndex: selectedIndex,
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          items:const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home, color: Color.fromARGB(0, 0, 0, 0),),
+              label: "Home"
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.data_array_rounded, color: Color.fromARGB(0, 0, 0, 0),),
+                label: "Datos",
+                ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.exit_to_app, color: Color.fromARGB(0, 0, 0, 0),),
+              label: "Salir",)
+          ],
+          unselectedLabelStyle: AppTheme.lightTheme.textTheme.bodyMedium,
+          ),
       );
   }
 }

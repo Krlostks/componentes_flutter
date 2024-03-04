@@ -20,10 +20,11 @@ class AppTheme{
       size: 35.0
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-        
+      style: ButtonStyle(  
         backgroundColor: const MaterialStatePropertyAll(Colors.grey),
-        textStyle: MaterialStateProperty.all(GoogleFonts.roboto(color: const Color.fromARGB(255, 255, 255, 255)))
+        textStyle: MaterialStateProperty.all(GoogleFonts.roboto(color: const Color.fromARGB(255, 255, 255, 255))
+        ),
+        
       
       )
     ),
