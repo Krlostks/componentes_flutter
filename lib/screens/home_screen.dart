@@ -1,3 +1,4 @@
+import 'package:componentes/screens/images_screen.dart';
 import 'package:componentes/screens/infinit_list_screen.dart';
 import 'package:componentes/screens/inputs_screen.dart';
 import 'package:componentes/screens/notifications_screen.dart';
@@ -76,12 +77,30 @@ class HomeScreen extends StatelessWidget {
               });
               Navigator.push(context, ruta3);
             },
+          ),
+          ListTile(
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.image)),
+              title: Text(
+                'Imagenes',
+                style: AppTheme.lightTheme.textTheme.headlineLarge,
+                ),
+                trailing:  IconTheme(
+                data: AppTheme.lightTheme.iconTheme,
+                child:const Icon ( Icons.arrow_circle_right),),
+              onTap:() {
+              final ruta4 = MaterialPageRoute(builder: (context){
+                return const ImagesScreen();
+              });
+              Navigator.push(context, ruta4);
+            },
           )
         ],
         ),
                 bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           items:const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Color.fromARGB(0, 0, 0, 0),),
