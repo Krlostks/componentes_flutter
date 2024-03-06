@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme{
-  static const primarycolor = Color.fromARGB(255, 105, 105, 105);
-  static const backColor=Color.fromARGB(0, 255, 36, 36);
-  static const iconos = Colors.blueAccent;
+  static const primarycolor = Color.fromARGB(255, 148, 148, 148);
+  static const  backColor =Color.fromRGBO(224, 224, 224, 1);
+  static const iconos = Color.fromARGB(255, 255, 255, 255);
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: backColor ,
+      scaffoldBackgroundColor: backColor,
       appBarTheme:  AppBarTheme(color : primarycolor,
         titleTextStyle: GoogleFonts.roboto(
         color: primarycolor,

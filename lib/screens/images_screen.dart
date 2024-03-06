@@ -18,6 +18,7 @@ class _ImagesScreenState extends State<ImagesScreen> {
       body: ListView(
         children:[
           imageCard(),
+          imageWeb(),
 
         ],)
     );
@@ -26,14 +27,29 @@ class _ImagesScreenState extends State<ImagesScreen> {
   Card imageCard() {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      child: const SizedBox(
-            width: 300,
-            height: 300,
-            child: Image(
-              image:AssetImage('assets/img/Max.jpg'),
-              )
-          ),
+      margin: const EdgeInsets.all(20),
+      elevation: 10,
+          child:  ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: 
+            Column(
+              children: [
+                Image(
+                  image:AssetImage('assets/img/Max.jpg'),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: Text('Un Max steel',style: AppTheme.lightTheme.textTheme.headlineLarge,),
+                  )
+              ],
+            ),)
+          );
 
+
+  }
+  Widget imageWeb(){
+    return Center(
+      child: Image.network('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Canis_lupus_265b.jpg/800px-Canis_lupus_265b.jpg'),
     );
   }
 }

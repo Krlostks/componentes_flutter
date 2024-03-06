@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           const Divider(
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Color.fromARGB(255, 0, 0, 0),
           ),
            ListTile(
             leading: IconTheme(
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           const Divider(
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Color.fromARGB(255, 0, 0, 0),
           ),
            ListTile(
             leading: IconTheme(
@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
         ),
                 bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
-          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: Color.fromARGB(255, 168, 168, 168),
           items:const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Color.fromARGB(0, 0, 0, 0),),
