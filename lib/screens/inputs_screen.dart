@@ -1,3 +1,7 @@
+import 'package:componentes/screens/home_screen.dart';
+import 'package:componentes/screens/images_screen.dart';
+import 'package:componentes/screens/infinit_list_screen.dart';
+import 'package:componentes/screens/notifications_screen.dart';
 import 'package:componentes/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +21,42 @@ class _InputsScreenState extends State<InputsScreen> {
   bool isChecked1 = false;
   bool isChecked2 = false;
   bool isChecked3 = false;
+
+  List screens = const [
+    HomeScreen(),
+    InfinitListScreen(),
+    NotificationsScreen(),
+    ImagesScreen(),
+  ];
+
+  openScreen(int index){
+    setState(() {
+
+      MaterialPageRoute ruta = MaterialPageRoute(builder: (context) => const HomeScreen() ); 
+
+      switch (index){
+      case 0: ruta = MaterialPageRoute(builder: (context) => const HomeScreen() ); 
+      break;
+      case 1:  ruta = MaterialPageRoute(builder: (context) => const InfinitListScreen() ); 
+      break;
+      case 2:  ruta = MaterialPageRoute(builder: (context) => const NotificationsScreen() ); 
+      break;
+      case 3:  ruta = MaterialPageRoute(builder: (context) => const ImagesScreen() ); 
+      break;
+      case 4:  ruta = MaterialPageRoute(builder: (context) => const HomeScreen() ); 
+      break;
+    }
+    
+
+    selectedIndex = index;
+    print('Selected index: $selectedIndex');
+    Navigator.push(
+      context, 
+      ruta 
+      );
+    }
+  );
+}
 
   @override
   Widget build(BuildContext context) {
@@ -44,19 +84,31 @@ class _InputsScreenState extends State<InputsScreen> {
       ),
       ), bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: AppTheme.primarycolor,
+          unselectedItemColor: AppTheme.backColor,
+          onTap: (index)=> openScreen(index),
           items:const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Color.fromARGB(0, 0, 0, 0),),
-              label: "Home"
-              ),
+
               BottomNavigationBarItem(
-                icon: Icon(Icons.data_array_rounded, color: Color.fromARGB(0, 0, 0, 0),),
-                label: "Datos",
+                icon: Icon(Icons.home,color: AppTheme.iconos ,),
+                label: "Home",
                 ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.exit_to_app, color: Color.fromARGB(0, 0, 0, 0),),
-              label: "Salir",)
+              BottomNavigationBarItem(
+                icon: Icon(Icons.list,color: AppTheme.iconos ,),
+                label: "Listas",
+                ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.notifications,color: AppTheme.iconos ,),
+                label: "Notificaciones",
+                ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.image,color: AppTheme.iconos ,),
+                label: "Imagenes",                ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.exit_to_app,color: AppTheme.iconos ,),
+                label: "Salir",
+                ),
+
           ],
           unselectedLabelStyle: AppTheme.lightTheme.textTheme.bodyMedium,
           ),

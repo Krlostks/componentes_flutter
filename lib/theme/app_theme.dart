@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme{
   static const primarycolor = Color.fromARGB(255, 148, 148, 148);
   static const  backColor =Color.fromRGBO(224, 224, 224, 1);
-  static const iconos = Color.fromARGB(255, 255, 255, 255);
+  static const iconos = Color.fromARGB(255, 0, 0, 0);
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
       scaffoldBackgroundColor: backColor,
